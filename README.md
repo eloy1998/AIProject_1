@@ -25,13 +25,14 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- ✅ **Game purpose:** A Streamlit guessing game where the user tries to guess a secret number within a range. The app provides hints and tracks score and attempts.
+- ✅ **Bugs found:** The hint messages were inverted (it said "Go HIGHER" when the guess was too high and "Go LOWER" when it was too low). The new-game reset ignored difficulty range and always picked a number between 1 and 100.
+- ✅ **Fixes applied:** Refactored game logic into `logic_utils.py`, corrected the hint direction in `check_guess()`, ensured `New Game` resets the secret number using the selected difficulty range, and added tests to validate the behavior.
 
 ## 📸 Demo
 
-- [ ] [Insert a screenshot of your fixed, winning game here]
+- ✅ **Tested in the running app:** The hint now correctly says "Go LOWER" when the guess is too high and "Go HIGHER" when the guess is too low.
+- 🔎 If you want to include a screenshot, capture the running Streamlit UI where the game shows a correct hint and paste the image here.
 
 ## 🚀 Stretch Features
 
