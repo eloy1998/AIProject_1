@@ -32,8 +32,15 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📸 Demo
 
 - ✅ **Tested in the running app:** The hint now correctly says "Go LOWER" when the guess is too high and "Go HIGHER" when the guess is too low.
-- 🔎 If you want to include a screenshot, capture the running Streamlit UI where the game shows a correct hint and paste the image here.
+- ✅ **Challenge 1 (Edge-Case Testing):** Added tests for decimal input, large numbers, and negative guesses to ensure edge inputs are handled gracefully.
+
+### 🧪 Pytest Result Screenshot (Challenge 1)
+
+- [ X Add a screenshot here showing the `pytest` command output with all tests passing.
+  - Tip: run `pytest -q` and take a screenshot of the terminal output (or use a snipping tool).
 
 ## 🚀 Stretch Features
 
-- [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+- [X] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
+
+![alt text](image.png)

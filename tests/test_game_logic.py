@@ -29,3 +29,25 @@ def test_guess_message_matches_direction():
 
     _, low_message = check_guess(40, 50)
     assert "HIGHER" in low_message.upper()
+
+
+def test_edge_cases_handle_decimal_and_large_numbers():
+    # The game should accept decimal input (truncated to int) and handle large values.
+    from logic_utils import parse_guess
+
+    ok, value, err = parse_guess("50.9")
+    assert ok and value == 50 and err is None
+
+    ok, value, err = parse_guess(str(10**18))
+    assert ok and value == 10**18 and err is None
+
+
+def test_edge_case_negative_numbers():
+    # Negative guesses should still be compared correctly.
+    outcome, message = check_guess(-5, -10)
+    assert outcome == "Too High"
+    assert "LOWER" in message.upper()
+
+    outcome, message = check_guess(-15, -10)
+    assert outcome == "Too Low"
+    assert "HIGHER" in message.upper()
